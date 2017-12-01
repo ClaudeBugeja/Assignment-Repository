@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class LoseBorder : MonoBehaviour {
+public class RightGoal : MonoBehaviour {
 
     LevelManager levelManager = new LevelManager(); // created an instance/copy of Level manager
-
+    public int score =0;
+    public Text Score1;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,18 +16,21 @@ public class LoseBorder : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		Score1.text = score.ToString();
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        print("Collision");
-    }
+  
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         print("Trigger");
-        levelManager.LoadNewScene("Lose");
+
+        score += 2;
+        
+         
+
+
+        
     }
 
     

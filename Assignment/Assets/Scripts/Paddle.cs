@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour {
 
-
-
+    
 
 
 	// Use this for initialization
@@ -15,18 +14,39 @@ public class Paddle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+
+        float position_y = transform.position.y;
+
+
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            Vector3 position = this.transform.position;
-            position.y++;
-            this.transform.position = position;
+            if (position_y > 2.5f)
+            {
+                position_y = 2.5f;
+            }
+            else
+            {
+                Vector3 newpos = this.transform.position;
+                newpos.y++;
+                this.transform.position = newpos;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+
+
+        if (Input.GetKey(KeyCode.DownArrow))
         {
-            Vector3 position = this.transform.position;
-            position.y--;
-            this.transform.position = position;
+            if (position_y < -6.7f)
+            {
+                position_y = -6.7f;
+            }
+            else
+            {
+                Vector3 newpos = this.transform.position;
+                newpos.y--;
+                this.transform.position = newpos;
+            }
         }
-	}
+
+     
+    }
 }

@@ -48,10 +48,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\Brick.cs" />
+     <Compile Include="Assets\Scripts\LeftGoal.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
-     <Compile Include="Assets\Scripts\LoseBorder.cs" />
      <Compile Include="Assets\Scripts\Paddle.cs" />
      <Compile Include="Assets\Scripts\Paddle2.cs" />
+     <Compile Include="Assets\Scripts\RightGoal.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>F:/Programming for Games/Assignment Repository/Assignment/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>

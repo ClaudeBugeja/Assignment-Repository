@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour {
-
+    public int score = 0;
+    public Text Score1;
     Paddle paddle;
     Vector3 ballPaddleDiff;
     bool gameStarted = false;
@@ -29,7 +31,12 @@ public class Ball : MonoBehaviour {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 10f);
         }
 	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("Triggered");
 
+        
+    }
 
-	}
+}
 
