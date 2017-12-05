@@ -4,23 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Ball : MonoBehaviour {
-    public int score = 0;
     public Text Score1;
     Paddle paddle;
     Vector3 ballPaddleDiff;
     bool gameStarted = false;
 
-	// Use this for initialization
-	void Start () {
-      
+    // Use this for initialization
+    void Start() {
+
         paddle = GameObject.FindObjectOfType<Paddle>();
         ballPaddleDiff = this.transform.position - paddle.transform.position;
-	}
+    }
 
     // Update is called once per frame
     void Update() {
 
-       if (!gameStarted) // if(gameStarted == false)
+        if (!gameStarted) // if(gameStarted == false)
         {
             this.transform.position = paddle.transform.position + ballPaddleDiff;
         }
@@ -28,14 +27,17 @@ public class Ball : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) && !gameStarted)
         {
             gameStarted = true;
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 10f);
+            this.GetComponent<Rigidbody2D>().velocity = new Vector3(2f, 10f);
         }
-	}
-    private void OnTriggerEnter2D(Collider2D collision)
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Triggered");
-
-        
+        if (collision.gameObject.name == "RightGoal") {
+            gameStarted = false;
+        }
+        if (collision.gameObject.name == "LeftGoal"){
+            gameStarted = false;
+        }
     }
 
 }

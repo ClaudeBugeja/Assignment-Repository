@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
-
+    public
 	// Use this for initialization
 	void Start () {
 		
@@ -15,13 +15,14 @@ public class LevelManager : MonoBehaviour {
 		
 	}
 
-    public void LoadNewScene(string sceneName)
+    public void LoadNewScene()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("Level_01");
     }
 
     public void QuitGame()
     {
         UnityEditor.EditorApplication.isPlaying = false;
     }
+
 }
