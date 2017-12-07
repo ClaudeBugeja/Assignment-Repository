@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\Blocker1.cs" />
+    <Compile Include="Assets\Scripts\Blocker2.cs" />
     <Compile Include="Assets\Scripts\LeftGoal.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Paddle.cs" />

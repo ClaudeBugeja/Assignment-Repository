@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Ball : MonoBehaviour {
-    public Text Score1;
+    
     Paddle paddle;
     Vector3 ballPaddleDiff;
     bool gameStarted = false;

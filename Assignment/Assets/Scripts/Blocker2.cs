@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Blocker1 : MonoBehaviour {
-    public GameObject Blocker;
+public class Blocker2 : MonoBehaviour {
+    public GameObject Blocker2;
     public int movement;
     private Vector3 startPos;
     // Use this for initialization
     void Start () {
         startPos = transform.position;
-
     }
 	
 	// Update is called once per frame
@@ -19,12 +18,9 @@ public class Blocker1 : MonoBehaviour {
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         }
-        else if(transform.position.y < -3.0f)
+        else if (transform.position.y < -3.0f)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         }
-        
-        
     }
-
 }

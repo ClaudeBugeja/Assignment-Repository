@@ -5,16 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class RightGoal : MonoBehaviour {
-
     LevelManager levelManager = new LevelManager(); // created an instance/copy of Level manager
-    public static int score;
+    public int score;
     public Text Score1;
     public string level;
     public int max;
     public int add;
-    float position_y = 2f;
-    float position_x = 5f;
-    float position_z = 5f;
     // Use this for initialization
     void Start () {
 		
@@ -34,7 +30,6 @@ public class RightGoal : MonoBehaviour {
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Trigger");
         
         score += add;
       

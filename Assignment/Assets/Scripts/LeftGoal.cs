@@ -6,14 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class LeftGoal : MonoBehaviour {
     LevelManager levelManager = new LevelManager();
-    public static int score2 ;
+    public int score2 ;
     public Text Scoreplay;
     public int max;
     public int add;
     public string level;
-    Paddle paddle;
-    Vector3 ballPaddleDiff;
-    bool gameStarted = false;
     // Use this for initialization
     void Start () {
         
