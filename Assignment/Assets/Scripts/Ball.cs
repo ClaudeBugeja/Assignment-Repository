@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour {
     Paddle paddle;
     Vector3 ballPaddleDiff;
     bool gameStarted = false;
+   
 
     // Use this for initialization
     void Start() {
@@ -34,9 +35,11 @@ public class Ball : MonoBehaviour {
     {
         if (collision.gameObject.name == "RightGoal") {
             gameStarted = false;
+       
         }
         if (collision.gameObject.name == "LeftGoal"){
             gameStarted = false;
+         
         }
     }
 
